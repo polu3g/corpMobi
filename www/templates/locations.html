@@ -1,0 +1,59 @@
+<ion-view view-title="Locations">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <h3>{{custName}}</h3>
+        <div class="content">
+            <div class="list animate-fade-slide-in-right" ng-hide="createLoc">
+                <a ng-repeat="location in locations" repeat-end="onEnd()" ng-click="enableLocEdit(location)" class="item item-avatar item-icon-right">
+                    <img src="img/building.png">
+                    <h2>{{location.LocationName}}</h2>
+                    <p ng-show="location.PhysicalAddress.City">{{location.PhysicalAddress.City}}, {{location.PhysicalAddress.State}}</p>
+                    <i class="icon ion-ios-circle-filled balanced" ng-show="($index == 0)"></i>
+                </a>
+            </div>
+            <div class="card assertive" ng-show="(locations.length == 0) && !createLoc">
+              <div class="item item-text-wrap">
+                You need to add a location before creating a Deal.
+              </div>
+            </div>            
+            <div class="list animate-fade-slide-in-right" ng-show="createLoc">
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Location name</label>
+                    <md-icon md-svg-src="img/icons/ic_location_city_24px.svg" class="name"></md-icon>		  
+                    <input ng-model="LocationName" type="text">
+                </md-input-container>                                         
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Address</label>
+                    <md-icon md-svg-src="img/icons/map-location.svg" class="name"></md-icon>		  
+                    <input ng-model="PhysicalAddress.AddressLine1" type="text">
+                </md-input-container>                                         
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>City</label>
+                    <md-icon md-svg-src="img/icons/factory.svg" class="name"></md-icon>		  
+                    <input ng-model="PhysicalAddress.City" type="text">
+                </md-input-container>                                         
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>State</label>
+                    <md-icon md-svg-src="img/icons/new-york-big-building.svg" class="name"></md-icon>		  
+                    <input ng-model="PhysicalAddress.State" type="text">
+                </md-input-container>                                         
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Zipcode&nbsp;  [{{country}}]</label>
+                    <md-icon md-svg-src="img/icons/browser.svg" class="name"></md-icon>		  
+                    <input ng-model="PhysicalAddress.ZipCode" type="text">
+                </md-input-container>  
+                <div class="button-bar" >
+                        <a class="button button-block button-assertive" ng-click="saveLocation(this)">
+                            {{buttonText}}
+                        </a>
+                </div>
+                <br/>
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

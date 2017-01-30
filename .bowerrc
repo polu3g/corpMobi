@@ -1,0 +1,5 @@
+{
+	"proxy":"http:///web-proxy.ind.hp.com:8080",
+	"https-proxy":"http:///web-proxy.ind.hp.com:8080",
+	"directory": "www/lib"
+}

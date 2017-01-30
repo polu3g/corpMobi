@@ -1,0 +1,15 @@
+<ion-view view-title="Customers">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content has-header">
+            <div class="list animate-fade-slide-in-right">
+                <a ng-repeat="cust in customers" repeat-end="onEnd()" ui-sref="app.custprofile({custobj: $index})" class="item item-avatar item-icon-right">
+                    <img src="img/customer.png">
+                    <h2>{{cust.CompanyName}}</h2>
+                    <p ng-show="cust.BillingAddress.City">{{cust.BillingAddress.City}}, {{cust.BillingAddress.State}}</p>
+		    <!--<span class="badge badge-assertive">48</span>-->
+                    <i class="icon ion-trophy balanced"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

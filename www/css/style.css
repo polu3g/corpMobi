@@ -1,0 +1,139 @@
+/* General
+==================================*/
+h1 {
+    color: #fff;
+    text-shadow: 0 1px 0px #000;
+    font-size: 42px;
+}
+
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+
+/* Menu
+==================================*/
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #387ef5;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../img/crown.png') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+/* EDP Quote
+==================================*/
+span.badgeCnt {
+    font-size: 18px;
+}
+.box {
+    min-height: 100%;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+.cardh2,.cardp{
+    color: red!important;
+    text-shadow: none!important;
+}
+.list:last-child {
+    margin-bottom: 0;
+}
+.list .item.item-bg-image>img{
+    opacity: 1;
+}
+.bar.bar-footer.navBtn {
+    margin-bottom: 9px;
+    box-shadow: none;
+}
+.item.item-divider {
+    background: #d4d3d3!important;
+}
+.odd { background: #f9f8f8!important; }
+
+.even { background: #eae9e9!important; }
+
+.item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content {
+    border-color: #ccc;
+    background-color: #D9D9D9;
+}
+.popover-backdrop.active {
+    z-index: 11;
+}
+.tabsdemoDynamicHeight md-content {
+    background-color: transparent !important; }
+.tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1; }
+.tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+    background: white; }
+.tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+/*.title.title-left.header-item {
+    position: relative;
+}*/
+.tmc .tab-nav.tabs {
+    margin-top: -34px!important;
+}
+a.button {
+  text-decoration: none; }
+  a.button .icon:before, a.button.icon:before, a.button.icon-left:before, a.button.icon-right:before {
+    margin-top: 7px!important;
+    }

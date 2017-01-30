@@ -1,0 +1,44 @@
+<ion-view view-title="Home">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="content">
+            <div class="list condensed-space no-padding animate-blinds">
+                <div class="card in">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.deal">
+                        <h2 class="cardh2">Strike a Deal</h2>
+                        <p class="cardp">You can create a deal with EDP</p>
+                        <img src="img/hp_banner_01.jpg">
+                    </a>
+                </div>
+                <div class="card in">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.friends">
+                        <h2>My Customers</h2>
+                        <p>A list of your customers</p>
+                        <img src="img/hp_banner_4.jpg">
+                    </a>
+                </div>
+                <div class="card in">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.friends({all:true})" >
+                        <h2>All Customers</h2>
+                        <p>A list of your company's customers</p>
+                        <img src="img/hp_banner_1.jpg">
+                    </a>
+                </div>
+                <div class="card in">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h2>My Deals</h2>
+                        <p>A list of your past deals</p>
+                        <img src="img/hp_banner_2.jpg">
+                    </a>
+                </div> 
+                <div class="card in">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.profile">
+                        <h2 class="cardh2">My Profile</h2>
+                        <p class="cardp">Your profile & settings</p>
+                        <img src="img/hp_banner_3.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+		
+    </ion-content>
+</ion-view>

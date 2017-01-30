@@ -1,0 +1,45 @@
+<ion-view view-title="Welcome">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/daenerys.jpg');"></div>
+                <h3><a class="light">Tadlock, Kenda</a></h3>
+                <h4>pS</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Personal Details
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-android-people"></i> Role(s)
+            </a>
+            <a ui-sref="app.gallery" class="tab-item">
+                <i class="icon ion-images"></i> Manage Notifications
+            </a>
+        </div>
+        <div class="list animate-fade-slide-in-right">
+            <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.deal">
+                        <h2 class="cardh2">Strike a Deal</h2>
+                        <p class="cardp">You can create a deal with EDP</p>
+                        <img src="img/hp_banner_01.jpg">
+            </a>
+            <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.friends">
+                        <h2>My Customers</h2>
+                        <p>A list of your customers</p>
+                        <img src="img/hp_banner_4.jpg">
+                    </a>
+            <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" ui-sref="app.friends({all:true})">
+                        <h2>All Customers</h2>
+                        <p>A list of your company's customers</p>
+                        <img src="img/hp_banner_1.jpg">
+                    </a>
+            <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h2>My Deals</h2>
+                        <p>A list of your past deals</p>
+                        <img src="img/hp_banner_2.jpg">
+                    </a>
+					
+        </div>
+    </ion-content>
+</ion-view>

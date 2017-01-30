@@ -1,0 +1,20 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/login.jpg) center; background-size: cover;" scroll="false"  on-swipe="swiped($event)" >
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>EDP Quote</h1>
+            </div>
+        </div>
+        <div class="list">
+            <ion-md-input placeholder="Username" highlight-color="balanced" type="text" ng-model="username"></ion-md-input>
+            <ion-md-input placeholder="Password" highlight-color="energized" type="password" ng-model="password"></ion-md-input>
+        </div>
+        <div class="padding">
+            <a ng-click="doLogin(username,password)" class="button button-full button-assertive ink">Login</a>
+        </div>
+        <div class="padding" style="color:white;background: transparent;">
+			HP Passport is secure  ; Your HP Passport profile information is protected by industry standard encryption technology.										
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,95 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Future fleet manager</h1>
+        <div class="buttons">
+            <button class="button button-icon ion-close" ng-click="closeModal($event)">
+            </button>
+        </div>      
+    </ion-header-bar>
+    <ion-content class="has-header padding">
+        <div class="list">
+            <div class="row">
+                <div class="col">
+                        <ion-list>
+                        <ion-radio ng-model="choice" ng-value="'NEW'">New device</ion-radio>
+                        <ion-radio ng-model="choice" ng-value="'IB'">Installed base</ion-radio>
+                        <ion-checkbox ng-model="localdevice">Local device</ion-checkbox>
+                        </ion-list>             
+                </div>
+                <div class="col">
+                <label class="item item-input input-calm">
+                    <span class="input-label">Quantity</span>
+                    <input type="number" placeholder="quantity">
+                </label>
+                </div>
+            </div>
+            <p style="margin: 0px;">Page volume/cartridge(s)</p>
+            <div class="row">
+                <div class="col">
+                <label class="item item-input item-floating-label input-calm">
+                    <span class="input-label">Mono</span>
+                    <input type="number" placeholder="Mono">
+                </label>
+                </div>
+                <div class="col">
+                <label class="item item-input item-floating-label input-calm">
+                    <span class="input-label">Color</span>
+                    <input type="number" placeholder="Color">
+                </label>
+                </div>
+            </div>
+            <p style="margin: 0px;">Annual printhead count</p>
+            <div class="row">
+                <div class="col">
+                <label class="item item-input item-floating-label input-calm">
+                    <span class="input-label">Mono</span>
+                    <input type="number" placeholder="Mono">
+                </label>
+                </div>
+                <div class="col">
+                <label class="item item-input item-floating-label input-calm">
+                    <span class="input-label">Color</span>
+                    <input type="number" placeholder="Color">
+                </label>
+                </div>
+            </div>
+            <p style="margin: 0px;">Hardware(hw) discounts & margin/commission</p>
+            <div class="row">
+                <div class="col">
+                <label class="item item-input item-floating-label input-calm">
+                    <span class="input-label">Additional hw% </span>
+                    <input type="number" placeholder="Addl disc %">
+                </label>
+                </div>
+                <div class="col">
+                <label class="item item-input item-floating-label input-calm">
+                    <span class="input-label">New hw% </span>
+                    <input type="number" placeholder="New hw%">
+                </label>
+                </div>
+            </div>
+        </div>
+
+        <i class="icon ion-arrow-expand" ng-click="toggleIpSection($event)">
+            Other details
+        </i>
+        <div class="list list-inset" ng-show="iplistshow">
+            <label class="item item-input">
+                <input type="text" placeholder="Serial number">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="IP address">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="MAC address">
+            </label>
+        </div>
+
+<p></p>
+        <div class="padding button-bar">
+            <button class="button button-stable" ng-click="closeModal($event)">Cancel</button>
+            <button class="button button-assertive" ng-click="closeModal($event)">Add</button>
+        </div>
+    </ion-content>      
+
+</ion-modal-view>

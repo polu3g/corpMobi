@@ -1,0 +1,121 @@
+<ion-popover-view style="width:300px!important;height:500px" >
+    <ion-header-bar align-title="left" class="bar-dark">
+        <h1 class="title" style="font-size: small;">Deal quickview</h1>
+        <div class="buttons button-dark">
+            <button class="icon ion-close dark" ng-click="closePopover()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-tabs class="tabs-positive tabs-icon-top">
+      <ion-tab title="Basic info" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+        <!-- Tab 1 content -->
+        <ion-pane>
+        <ion-content>
+         <div class="list" style="font-size: smaller;">
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-person-stalker"></i>
+                {{customerName}}
+            </a>            
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios-location"></i>
+                {{locationDetails}}
+            </a>
+            <div class="row bar-calm">
+                Deal parameters
+            </div>
+             <div class="dealparams">
+                <div class = "row">
+                   <div class = "col">Prog. type</div>
+                   <div class = "col">{{getProgType(deal.salesmode)}}</div>
+                </div>                           
+                <div class = "row">
+                   <div class = "col">Billing model</div>
+                   <div class = "col">{{getBmName(deal.billingmodel)}}</div>
+                </div>                           
+                <div class = "row">
+                   <div class = "col">Cont. type</div>
+                   <div class = "col">{{deal.contracttype}}</div>
+                </div>                           
+                <div class = "row">
+                   <div class = "col">Pricing strategy</div>
+                   <div class = "col">{{getPriceStrgy(deal.pricestretegy)}}</div>
+                </div>                           
+                <div class = "row">
+                   <div class = "col">Terms</div>
+                   <div class = "col">{{deal.termmonths}} months</div>
+                </div>                           
+            </div>
+            <div class="row bar-calm">
+                    Deal summary
+            </div>        
+            <div class="dealsumm">
+                <div class = "row header-assertive" style="padding: 0;margin-top: .1em;background-color: grey;">
+                   <div class = "col">Price</div>
+                   <div class = "col">Disc</div>
+                   <div class = "col">TNP</div>
+                   <div class = "col">Comm</div>
+                   <div class = "col">TCP</div>
+                </div>                
+                <div class = "row">
+                   <div class = "col">1,980</div>
+                   <div class = "col">3</div>
+                   <div class = "col">2,830</div>
+                   <div class = "col">2</div>
+                   <div class = "col">2,880</div>
+                </div>                
+            </div>  
+             <br/>
+            <div class="button-bar">
+                <a class="button button-balanced button-small">Generate quote</a>
+                <a class="button button-assertive button-small">Won deal</a>
+            </div>
+        </div>
+        </ion-content>
+      </ion-pane>        
+      </ion-tab>
+
+      <ion-tab title="Fleets" icon-on="ion-ios-printer" icon-off="ion-ios-printer-outline" badge="20" badge-style="badge-assertive">
+        <!-- Tab 2 content -->
+        <ion-pane>
+        <ion-content>
+            <button class="button button-fab button-assertive button-small" style="position: fixed;margin-left: 265px;margin-top: 121%;width: 10px;height: 10px;">
+                <i class="icon ion-plus"></i>
+            </button>
+             <div class="row bar-calm">
+                <i class="icon ion-arrow-expand" ng-click="toggleFleetSection($event)">
+                    Install-base added ({{items.length}})
+                </i>            
+            </div>
+            <ion-list ng-show="fleetlistshow">
+                <ion-item ng-repeat="item in items" class="row" ng-class-odd="'odd'" ng-class-even="'even'">
+                    {{item}}!
+                </ion-item>
+            </ion-list>        
+             <div class="row bar-calm">
+                <i class="icon ion-arrow-expand" ng-click="toggleFleetSection($event)">
+                    New-fleet added ({{items.length}})
+                </i>            
+            </div>
+            <ion-list ng-show="fleetlistshow">
+                <ion-item ng-repeat="item in items" class="row" ng-class-odd="'odd'" ng-class-even="'even'">
+                    {{item}}!
+                </ion-item>
+            </ion-list>        
+        </ion-content>
+      </ion-pane>        
+      </ion-tab>
+
+      <ion-tab title="Exception" icon-on="ion-sad" icon-off="ion-sad-outline" badge="3" badge-style="badge-assertive">
+        <!-- Tab 3 content -->
+        <ion-pane>
+        <ion-content>
+            <div class="row bar-calm">
+                <i class="icon ion-arrow-expand" ng-click="toggleSection($event)">
+                    Exception raised
+                </i>            
+            </div>
+        </ion-content>
+      </ion-pane>        
+      </ion-tab>
+                
+    </ion-tabs>   
+</ion-popover-view>

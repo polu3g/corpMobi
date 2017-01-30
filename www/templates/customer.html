@@ -1,0 +1,77 @@
+<ion-view view-title="Customer profile">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/cust-profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/customer-support-icon.png');"></div>
+                <h3><a class="light">{{custDetail.CompanyName}}</a></h3>
+                <h4>{{custDetail.IndustryName}}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a class="tab-item">
+                <i class="icon ion-ios-list"></i> Account details
+            </a>
+            <a ng-hide="(custDetail.CustomerId == -1)" ui-sref="app.location({custid:custDetail.CustomerId,compname:custDetail.CompanyName})" class="tab-item">
+                <i class="icon ion-location"></i> Location(s)
+            </a>
+        </div>
+        <h4 class="content padding double-padding-x">Account details</h4>
+        <div class="list animate-fade-slide-in-right">
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>Customer legal name</label>
+                <md-icon md-svg-src="img/icons/ic_people_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.CompanyName" type="text">
+            </md-input-container>                                         
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>Description</label>
+                <md-icon md-svg-src="img/icons/ic_domain_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.Description" type="text">
+            </md-input-container>                                         
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>Customer email address</label>
+                <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.EmailAddress" type="email">
+            </md-input-container>      
+            <md-input-container class="md-icon-float md-block" ng-show="(custDetail.CustomerId == -1)">
+                <!-- Use floating label instead of placeholder -->
+                <label>Location name</label>
+                <md-icon md-svg-src="img/icons/ic_location_city_24px.svg" class="name"></md-icon>		  
+                <input ng-model="LocationName" type="text">
+            </md-input-container>                                         
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>Address</label>
+                <md-icon md-svg-src="img/icons/ic_location_city_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.BillingAddress.AddressLine1" type="text">
+            </md-input-container>                                         
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>City</label>
+                <md-icon md-svg-src="img/icons/ic_location_city_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.BillingAddress.City" type="text">
+            </md-input-container>                                         
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>State</label>
+                <md-icon md-svg-src="img/icons/ic_location_city_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.BillingAddress.State" type="text">
+            </md-input-container>                                         
+            <md-input-container class="md-icon-float md-block item">
+                <!-- Use floating label instead of placeholder -->
+                <label>Zipcode&nbsp;  [{{custDetail.BillingAddress.CountryName}}]</label>
+                <md-icon md-svg-src="img/icons/ic_location_city_24px.svg" class="name"></md-icon>		  
+                <input ng-model="custDetail.BillingAddress.ZipCode" type="text">
+            </md-input-container>     
+            <div class="button-bar" ng-show="editCustFlag">
+                    <a class="button button-block button-positive" ng-click="saveCustomer(this)">
+                        Save
+                    </a>
+            </div>     
+            <br/>    
+
+        </div>
+    </ion-content>
+</ion-view>
